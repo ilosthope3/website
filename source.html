@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Blackjack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <script src="core.js"></script>
+  <script src="animations.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+  <div id="outer-div" onload="init()">
+    <div id="statistics" class="separation">
+      <div id="stat" class="panel">
+        <h1>Game History</h1>
+      </div>
+      <div id="btn3" class="close-button" onclick="slider(100)"></div>
+    </div>
+
+    <div id="playarea" class="separation">
+      <div class="panel play" id="card-table">
+
+          <div id="play-button" onclick="blackjack()">
+          </div>
+          <div id="dealer" class="area">
+            <div class="card"></div>
+
+          </div>
+
+          <div id="player" class="area">
+            <div class="card">
+          </div>
+
+          </div>
+      </div>
+      <div id="btn2" class="close-button play" onclick="slider(1)"></div>
+    </div>
+
+    <div id="information" class="separation">
+      <div class="panel info" id="text-bg">
+        <h1>Blackjack</h1>
+        <h2>Info</h2>
+        <p1>In this simulator the rules are of standard blackjack, where you play solo
+        against the dealer with a 52 card deck that excludes jokers. This simulation is
+        made with one deck of cards that is reshuffled between every round of blackjack
+        and with every card played it is removed from the virtual deck meaning it cannot
+        be played during that round. The aim of the game is to be closest to 21 without
+        going over it, as the player, you will start with 2 cards and decide to hit(take
+        another card at the risk of going over 21) or stand(pass the turn onto the dealer
+        and hope that he will not get closer to 21 than you). If you do get over 21, as
+        the player you immediatly lose. Each card has a value, each card from 2-10
+        included holds the same value as written and the card, the jack, queen and king
+        are worth ten and an ace is either 1 or 11 points.</p1>
+        </div>
+      <div id="btn1" class="close-button info" onclick="slider(10)"></div>
+    </div>
+
+
+
+  </div>
+</body>
+
+</html>
